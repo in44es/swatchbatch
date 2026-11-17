@@ -1,0 +1,92 @@
+:root {
+  font-family: 'Segoe UI Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #302b46;
+  background: #f7f5fc;
+  --ink: #302b46;
+  --muted: #716b83;
+  --line: #e6e0f2;
+  --primary: #7354bb;
+  --primary-hover: #5d3fa3;
+  --primary-soft: #f0eafa;
+  --accent: #c85d78;
+  --green: #2d8a68;
+  --green-soft: #e3f5ed;
+  --glass: #ffffff;
+  --shadow-sm: 0 4px 16px rgba(79, 53, 130, 0.05);
+  --shadow-md: 0 10px 28px rgba(79, 53, 130, 0.08);
+  --shadow-lg: 0 18px 45px rgba(79, 53, 130, 0.12);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+  --max-w: 1140px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-width: 320px; color: var(--ink); background: #f7f5fc; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px); background: rgba(247, 245, 252, 0.9); border-bottom: 1px solid var(--line); padding: 14px 0; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 750; }
+.brand-icon { width: 36px; height: 36px; object-fit: contain; }
+.brand-accent { color: var(--primary); }
+.studio-badge { padding: 3px 8px; border: 1px solid #dcd0f2; border-radius: var(--radius-full); color: #7354a3; font-size: 10px; font-weight: 600; background: #fff; }
+
+.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; }
+.nav-links a { font-size: 13.5px; font-weight: 600; color: var(--muted); }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 18px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; transition: all 0.18s ease; cursor: pointer; border: none; }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 3px 12px rgba(115, 84, 187, 0.25); }
+.btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+.btn-secondary { background: #fff; color: var(--ink); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+.btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+.btn-green { background: var(--green); color: #fff; box-shadow: 0 3px 12px rgba(45, 138, 104, 0.25); }
+.btn-green:hover { background: #226f53; transform: translateY(-1px); }
+.btn-disabled { background: #ede8f5; color: #8e84a1; border: 1px solid #ddd3ea; cursor: default; }
+
+/* Catalog Header */
+.catalog-hero { padding: 44px 0 28px; text-align: center; }
+.catalog-hero h1 { font-size: clamp(30px, 3.8vw, 44px); font-weight: 800; letter-spacing: -1.2px; margin-bottom: 12px; }
+.catalog-hero h1 em { font-style: normal; color: var(--primary); }
+.catalog-hero p { color: var(--muted); font-size: 15.5px; max-width: 680px; margin: 0 auto 28px; }
+
+/* Filter Pills */
+.filter-bar { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+.filter-btn { padding: 6px 14px; border-radius: var(--radius-full); font-size: 12px; font-weight: 600; background: #fff; border: 1px solid var(--line); color: var(--muted); cursor: pointer; transition: all 0.15s ease; }
+.filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* Catalog Cards */
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-bottom: 48px; }
+.catalog-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; position: relative; }
+.catalog-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #d7cbef; }
+
+.catalog-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.catalog-card-brand { display: flex; align-items: center; gap: 12px; }
+.catalog-card-icon { width: 48px; height: 48px; border-radius: 14px; background: #fbf9fe; border: 1px solid var(--line); display: grid; place-items: center; flex-shrink: 0; }
+.catalog-card-icon img { width: 38px; height: 38px; object-fit: contain; }
+.catalog-card-title h2 { font-size: 20px; font-weight: 750; letter-spacing: -0.4px; }
+.catalog-card-title span { font-size: 12px; color: var(--muted); }
+
+.card-status-badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-full); text-transform: uppercase; }
+.status-free { background: var(--green-soft); color: var(--green); border: 1px solid #c8ebd9; }
+.status-demo { background: var(--primary-soft); color: var(--primary); border: 1px solid #dfd3f4; }
+.status-coming { background: #fdf2f4; color: var(--accent); border: 1px solid #f8ccd5; }
+
+.catalog-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin-bottom: 18px; flex-grow: 1; }
+
+.catalog-meta-list { display: flex; flex-direction: column; gap: 6px; padding: 12px; background: #fbf9fe; border-radius: var(--radius-sm); border: 1px solid #eee7f7; font-size: 12px; color: #5a526d; margin-bottom: 20px; }
+.catalog-meta-list li { display: flex; justify-content: space-between; }
+.catalog-meta-list strong { color: var(--ink); }
+
+.catalog-card-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 16px; margin-top: auto; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); background: #fff; padding: 36px 0 24px; margin-top: 48px; }
+.footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid #f0ecf7; }
+.footer-disclaimer { padding-top: 18px; font-size: 11.5px; color: #948e9f; }

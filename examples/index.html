@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparatif des Exemples Multi-pages — Pop Studio</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f1fb;
+      color: #302b46;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrapper {
+      max-width: 900px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #302b46;
+      text-align: center;
+    }
+    p.subtitle {
+      color: #716b83;
+      text-align: center;
+      margin-bottom: 36px;
+      font-size: 16px;
+    }
+    .examples-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .example-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(79, 53, 130, 0.08);
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+    .example-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(79, 53, 130, 0.12);
+      border-color: #7354bb;
+    }
+    .badge {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .badge-1 { background: #f0eafa; color: #7354bb; }
+    .badge-2 { background: #e5f6ef; color: #2d8a68; }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    p.desc {
+      color: #716b83;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    ul.features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      font-size: 13.5px;
+      color: #4b445f;
+    }
+    ul.features li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .btn-1 { background: #7354bb; color: #fff; }
+    .btn-1:hover { background: #5d3fa3; }
+    .btn-2 { background: #2d8a68; color: #fff; }
+    .btn-2:hover { background: #226f53; }
+    @media (max-width: 700px) {
+      .examples-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Choisissez votre architecture multi-pages</h1>
+    <p class="subtitle">Deux concepts complets et fonctionnels créés en local pour Pop Studio by In44es :</p>
+
+    <div class="examples-grid">
+      <!-- Concept 1 -->
+      <div class="example-card">
+        <span class="badge badge-1">Concept 1 · Recommandé</span>
+        <h2>The Studio Hub</h2>
+        <p class="desc">
+          Une architecture moderne et aérée façon studio de création. L'accueil présente la suite globale avec les deux outils sur un pied d'égalité, et chaque outil dispose de sa propre page produit détaillée.
+        </p>
+        <ul class="features">
+          <li>✨ <strong>Accueil Hub :</strong> Présentation équilibrée des deux outils phares</li>
+          <li>🛋️ <strong>Page SwatchBatch :</strong> Workflow, 6 fonctionnalités, comparatif, pricing</li>
+          <li>🎨 <strong>Page EaselEase :</strong> Modes chevalet & toiles murales, guide 3 étapes</li>
+          <li>❓ <strong>Page FAQ :</strong> Questions fréquentes d'installation et de compatibilité</li>
+        </ul>
+        <a href="1-studio-hub/index.html" class="btn btn-1">Ouvrir le Concept 1 (Studio Hub) &rarr;</a>
+      </div>
+
+      <!-- Concept 2 -->
+      <div class="example-card">
+        <span class="badge badge-2">Concept 2 · Style Boutique</span>
+        <h2>The Creator Catalog</h2>
+        <p class="desc">
+          Une architecture inspirée des plateformes de mods et d'outils CC (type CurseForge / itch.io) avec barre de filtre interactive, fiches descriptives complètes et métadonnées techniques.
+        </p>
+        <ul class="features">
+          <li>🏷️ <strong>Catalogue avec filtres :</strong> Desktop, Web, Free, Recoloring, Art</li>
+          <li>📋 <strong>Fiches outils détaillées :</strong> Fiche technique, plateformes, tarification</li>
+          <li>🚀 <strong>Prêt pour la suite :</strong> Idéal pour ajouter 3, 5 ou 10 futurs outils</li>
+          <li>📦 <strong>Fiches produits dédiées :</strong> Pages individuelles par outil</li>
+        </ul>
+        <a href="2-creator-catalog/index.html" class="btn btn-2">Ouvrir le Concept 2 (Creator Catalog) &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
