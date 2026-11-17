@@ -85,11 +85,10 @@ img, svg { display: block; max-width: 100%; }
 .flagship-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .flagship-card-swatch { border-top: 5px solid var(--primary); }
 .flagship-card-easel { border-top: 5px solid var(--green); }
-.flagship-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
-.flagship-brand { display: flex; align-items: center; gap: 14px; }
-.flagship-icon-box { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; background: #fff; box-shadow: 0 4px 14px rgba(79, 53, 130, 0.08); flex-shrink: 0; }
-.flagship-icon-box img { width: 40px; height: 40px; object-fit: contain; }
-.flagship-brand h2 { font-size: 23px; font-weight: 750; letter-spacing: -0.6px; margin: 0; }
+.flagship-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.flagship-brand { display: flex; flex-direction: column; gap: 4px; }
+.flagship-brand h2 { font-size: 24px; font-weight: 750; letter-spacing: -0.6px; margin: 0; line-height: 1.2; }
+.flagship-brand small { color: var(--muted); font-size: 13px; font-weight: 600; display: block; }
 .flagship-badge { padding: 4px 10px; border-radius: var(--radius-full); font-size: 10px; font-weight: 700; text-transform: uppercase; }
 .badge-desktop { background: var(--primary-soft); color: var(--primary); border: 1px solid #dfd3f4; }
 .badge-webapp { background: var(--green-soft); color: var(--green); border: 1px solid #caebd9; }
