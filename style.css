@@ -97,10 +97,10 @@ button {
 }
 
 .brand-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(115, 84, 187, 0.15);
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(115, 84, 187, 0.2));
 }
 
 .brand-accent {
