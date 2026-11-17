@@ -5,27 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary SEO Tags -->
-  <title>SwatchBatch — The Sims 4 Object Recolor Tool & Standalone CC Creator</title>
-  <meta name="title" content="SwatchBatch — The Sims 4 Object Recolor Tool & Standalone CC Creator">
-  <meta name="description" content="SwatchBatch is the offline Windows workshop to easily recolor The Sims 4 objects. Create standalone .package custom content with magnetic lasso precision, multi-part layering, and pattern support. No Blender required. Only €5 on itch.io.">
-  <meta name="keywords" content="Sims 4 recolor tool, Sims 4 CC creator, The Sims 4 object recolor, Sims 4 standalone package, Sims 4 texture recolor, Sims 4 custom content maker, TS4 recoloring software, Sims 4 magnetic lasso recolor, Sims 4 CC without Blender">
+  <title>SwatchBatch & EaselEase — The Sims 4 Object Recolor & Custom Painting Tools</title>
+  <meta name="title" content="SwatchBatch & EaselEase — The Sims 4 Object Recolor & Custom Painting Tools">
+  <meta name="description" content="Create The Sims 4 custom content easily! Recolor objects and create standalone packages with SwatchBatch, or generate custom in-game easel paintings and wall decor directly in your browser with EaselEase (100% Free).">
+  <meta name="keywords" content="Sims 4 recolor tool, Sims 4 CC creator, The Sims 4 object recolor, Sims 4 custom paintings maker, Sims 4 easel paintings mod, Sims 4 easel painting generator, Sims 4 wall art CC, EaselEase Sims 4, Sims 4 paint from reference tool, Sims 4 texture recolor, Sims 4 CC without Blender">
   <meta name="author" content="In44es">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://in44es.itch.io/swatchbatchfull">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="product">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://in44es.itch.io/swatchbatchfull">
-  <meta property="og:title" content="SwatchBatch — The Sims 4 Object Recolor Tool & CC Creator">
-  <meta property="og:description" content="Recolor The Sims 4 objects in minutes. Magnetic lasso, multi-part layering, pattern repeat, and direct standalone package export. Get the Full Edition for €5 on itch.io!">
+  <meta property="og:title" content="SwatchBatch & EaselEase — The Sims 4 CC Creation Tools by In44es">
+  <meta property="og:description" content="Recolor Sims 4 objects in minutes with SwatchBatch, and generate custom easel and wall paintings online with EaselEase (100% Free).">
   <meta property="og:image" content="couch-icon.png">
-  <meta property="product:price:amount" content="5.00">
-  <meta property="product:price:currency" content="EUR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SwatchBatch — The Sims 4 Object Recolor Tool">
-  <meta name="twitter:description" content="Create your own Sims 4 object recolors and standalone packages in minutes. Available on itch.io for €5.">
+  <meta name="twitter:title" content="SwatchBatch & EaselEase — The Sims 4 CC Creation Tools">
+  <meta name="twitter:description" content="Recolor Sims 4 objects with SwatchBatch, and turn images into in-game easel paintings with EaselEase (Free web tool).">
   <meta name="twitter:image" content="couch-icon.png">
 
   <!-- Favicon & App Icon -->
@@ -57,8 +55,44 @@
         }
       },
       {
+        "@type": "WebApplication",
+        "name": "EaselEase",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "All modern web browsers",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Free web-based tool for The Sims 4 to turn any image into custom wall paintings and playable in-game easel paintings without installing software.",
+        "url": "https://in44es.itch.io/easelease",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://in44es.itch.io/easelease"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "In44es"
+        }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is EaselEase and how does it work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EaselEase is a 100% free web app created by In44es that runs directly in your browser without any installation. It lets you turn any image into custom wall decor paintings or into real playable paintings that your Sims can paint on the easel in-game."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can my Sims actually paint my custom images on the easel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! EaselEase supports generating custom easel painting packages so that when your Sim practices painting at an easel, your custom pictures appear as their artwork creations."
+            }
+          },
           {
             "@type": "Question",
             "name": "Do I need Blender or 3D modeling skills to use SwatchBatch?",
@@ -120,6 +154,7 @@
         <ul class="nav-links">
           <li><a href="#workflow">How It Works</a></li>
           <li><a href="#features">Features</a></li>
+          <li><a href="#easelease">EaselEase <span class="nav-free-pill">FREE WEB</span></a></li>
           <li><a href="#comparison">Demo vs Full</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -341,6 +376,73 @@
       </div>
     </section>
 
+    <!-- EaselEase Showcase Section -->
+    <section id="easelease" class="easelease-section">
+      <div class="container">
+        <div class="easelease-card">
+          <div class="easelease-info">
+            <div class="easelease-tag">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              100% Free Web App · In-Browser Tool
+            </div>
+            <h3>Discover <em>EaselEase</em><br>Custom Paintings in Your Browser</h3>
+            <p class="easelease-desc">
+              Looking to bring personal photos, family portraits, and real-life artwork into The Sims 4? <strong>EaselEase</strong> is a free online tool created by In44es that runs directly in your web browser with <strong>zero installation</strong> required.
+            </p>
+
+            <div class="easelease-grid-mini">
+              <div class="easelease-mini-item">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--green);"><path d="m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z"/><path d="m5 2 5 5"/><path d="m2 5 5 5"/></svg>
+                  Paintable on the Easel
+                </h4>
+                <p>Add custom paintings that your Sims can actually create while painting at the in-game easel during gameplay!</p>
+              </div>
+
+              <div class="easelease-mini-item">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                  Wall Art & Posters Decor
+                </h4>
+                <p>Turn any image into ready-to-hang wall art canvases, framed paintings, and posters for Build/Buy mode.</p>
+              </div>
+            </div>
+
+            <div class="easelease-actions">
+              <a href="https://in44es.itch.io/easelease" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+                Launch EaselEase in Browser (Free)
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="easelease-visual" aria-hidden="true">
+            <div class="easel-art-mockup">
+              <div class="easel-canvas-frame">
+                <div class="easel-canvas-art">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#604b75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                  </svg>
+                  <small style="color: #4f3b64; font-weight: 700; margin-top: 8px; font-size: 11px;">Your Custom Artwork</small>
+                </div>
+              </div>
+              <div class="easel-legs">
+                <svg viewBox="0 0 200 120" fill="none" stroke="#b48b70" stroke-width="7" stroke-linecap="round">
+                  <line x1="20" y1="110" x2="85" y2="10" />
+                  <line x1="180" y1="110" x2="115" y2="10" />
+                  <line x1="100" y1="110" x2="100" y2="20" stroke-width="5" />
+                  <line x1="45" y1="75" x2="155" y2="75" stroke-width="6" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Comparison Table: Demo vs Full -->
     <section id="comparison" class="comparison-section">
       <div class="container">
@@ -525,6 +627,26 @@
 
           <details class="faq-item">
             <summary>
+              <span>What is EaselEase and how does it work?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-content">
+              <strong>EaselEase</strong> is a 100% free web app by In44es that runs directly in any modern browser (no installation needed). It converts any image or photo into custom The Sims 4 paintings: either as decorative wall art objects for Build/Buy mode, or as custom easel paintings that your Sims actually paint during gameplay.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can my Sims really paint my custom artwork on the easel in-game?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-content">
+              Yes! EaselEase generates custom easel artwork packages. When your Sim practices painting at an easel, your custom pictures will appear on their canvas as their artwork creation.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
               <span>What are the system requirements?</span>
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
@@ -550,6 +672,7 @@
           A little studio for big color ideas. <span class="footer-signature">By In44es</span>
         </p>
         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <a href="https://in44es.itch.io/easelease" class="btn btn-secondary" target="_blank" rel="noopener">EaselEase (Free Web) ↗</a>
           <a href="https://in44es.itch.io/swatchbatchdemo" class="btn btn-primary" target="_blank" rel="noopener">Try Free Demo</a>
           <span class="btn btn-disabled" aria-disabled="true">Full Edition — Coming Soon</span>
         </div>
