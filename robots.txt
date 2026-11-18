@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://in44es.itch.io/swatchbatchfull/sitemap.xml
+Sitemap: https://easy4cc.com/sitemap.xml
