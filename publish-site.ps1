@@ -42,7 +42,7 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host ""
 Write-Host "Synchronisation avec GitHub..." -ForegroundColor Cyan
-git pull --rebase origin main
+git pull --rebase -X theirs origin main
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Erreur lors de la synchronisation avec GitHub." -ForegroundColor Red
     exit 1
