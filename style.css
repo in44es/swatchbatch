@@ -81,8 +81,11 @@ img, svg { display: block; max-width: 100%; }
 
 /* Flagship 50/50 Cards */
 .flagship-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; text-align: left; margin-bottom: 32px; }
-.flagship-card { background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 34px 30px; box-shadow: var(--shadow-md); backdrop-filter: blur(16px); display: flex; flex-direction: column; transition: transform 0.22s ease, box-shadow 0.22s ease; }
+.flagship-card { background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.95); border-radius: var(--radius-lg); padding: 34px 30px; box-shadow: var(--shadow-md); backdrop-filter: blur(16px); display: flex; flex-direction: column; transition: transform 0.22s ease, box-shadow 0.22s ease; cursor: pointer; }
 .flagship-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.flagship-brand-link { text-decoration: none; color: inherit; display: block; }
+.flagship-brand-link:hover h2 { color: var(--primary); }
+.flagship-card-easel .flagship-brand-link:hover h2 { color: var(--green); }
 .flagship-card-swatch { border-top: 5px solid var(--primary); }
 .flagship-card-easel { border-top: 5px solid var(--green); }
 .flagship-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
