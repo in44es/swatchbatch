@@ -1,11 +1,20 @@
-# SwatchBatch Official Website & Landing Page
+# Site web des utilitaires Sims 4
+
+Le site est maintenant un depot Git independant dans
+`Documents\Projets Sims 4\Site web`, separe du projet SwatchBatch.
+Sa racine contient `index.html`, `swatchbatch.html`, `easelease.html`,
+`faq.html`, les styles, les scripts et les ressources.
+Le raccourci `Ouvrir le site.lnk` ouvre l'accueil en local.
+Pour publier, utiliser les fichiers du site sans le dossier `.git` ni
+le raccourci Windows. Aucun changement de domaine ou de depot distant
+n'a ete effectue pendant le rangement.
 
 Landing page promotionnelle et vitrine commerciale pour **SwatchBatch (Full Edition — 5€)**.
 
 - Version Démo gratuite : https://in44es.itch.io/swatchbatchdemo
 - Version Complète (5€) : https://in44es.itch.io/swatchbatchfull
 
-## 📁 Structure du site (`website/`)
+## 📁 Structure du site (`Site web/`)
 
 - `index.html` : Page unique sémantique HTML5 complète avec balisage SEO avancé, métadonnées Open Graph / Twitter Card et données structurées Schema.org (`SoftwareApplication`, `Product`, `FAQPage`).
 - `style.css` : Thème visuel **Pop Studio** (palette pastel lavande `#f4f1fb`, cartes flottantes, effets de verre *glassmorphism*, typographie et badges).
@@ -21,11 +30,11 @@ Ce site est 100% statique, sans framework lourd, ce qui garantit un score de per
 
 ### 1. GitHub Pages (Recommandé)
 1. Créez un dépôt GitHub pour le site ou utilisez la branche `gh-pages` de votre dépôt.
-2. Activez GitHub Pages dans **Settings > Pages** en ciblant la racine du dossier ou le dossier `/website`.
+2. Activez GitHub Pages dans **Settings > Pages** en ciblant la racine du depot du site.
 3. Votre site sera disponible gratuitement sur `https://votre-pseudo.github.io/swatchbatch`. Vous pouvez également lier un nom de domaine personnalisé (`swatchbatch.com`).
 
 ### 2. Cloudflare Pages / Netlify / Vercel
-- Glissez-déposez simplement le dossier `website/` dans l'interface de Cloudflare Pages ou Netlify pour une mise en ligne en 30 secondes avec certificat SSL automatique et CDN mondial ultra-rapide.
+- Glissez-déposez les fichiers du dossier `Site web/` (sans `.git` ni raccourci Windows) dans l'interface de Cloudflare Pages ou Netlify.
 
 ---
 
