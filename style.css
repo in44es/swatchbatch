@@ -151,6 +151,10 @@ section { padding: 56px 0; }
 .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 24px; border-bottom: 1px solid rgba(115, 84, 187, 0.08); }
 .footer-disclaimer { padding-top: 20px; font-size: 11.5px; color: #8a8397; line-height: 1.6; }
 
+.flagship-brand-row { display: flex; align-items: center; gap: 14px; }
+.flagship-tool-icon { width: 46px; height: 46px; flex-shrink: 0; border-radius: 12px; }
+.hero-tool-icon { width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 16px; box-shadow: var(--shadow-sm); }
+
 @media (max-width: 900px) {
   .flagship-grid, .workflow-steps-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
