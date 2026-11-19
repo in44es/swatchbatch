@@ -134,127 +134,228 @@
         </div>
         <h1>Make Sims 4 CC easily.<br><em>From player to creator.</em></h1>
         <p class="hero-subtitle">
-          Wondering how to make Sims 4 CC without learning Blender or complex 3D software? Easy4CC gives every player simple tools to easily recolor Sims 4 furniture, apply custom fabric patterns, or turn personal photos into real in-game paintings in just a few clicks.
+          Pick a tool below — hover or click any tile to see what it does, no Blender or 3D skills required.
         </p>
 
-        <!-- 50/50 Dual Flagship Tools Grid -->
-        <div class="flagship-grid">
-          <!-- Card 1: SwatchBatch -->
-          <div class="flagship-card flagship-card-swatch" data-href="swatchbatch.html" tabindex="0" role="link" aria-label="Go to SwatchBatch page">
-            <div class="flagship-top">
-              <a href="swatchbatch.html" class="flagship-brand-link">
-                <div class="flagship-brand-row">
-                  <img src="assets/swatchbatch/swatchbatch-icon.svg" alt="SwatchBatch icon" class="flagship-tool-icon" width="46" height="46">
-                  <div class="flagship-brand">
-                    <h2>SwatchBatch</h2>
-                    <small>Easily Recolor Sims 4 Objects &amp; Furniture</small>
+        <!-- Interactive Launcher Dock (top) + Spotlight Card (below) -->
+        <div id="tools-showcase" class="tools-showcase">
+          <div class="launcher-dock" role="tablist" aria-label="Easy4CC Tools">
+            <!-- Tile 1: SwatchBatch -->
+            <button type="button" class="tool-tile is-active" data-tool="swatchbatch" data-accent="purple" role="tab" aria-selected="true" aria-controls="pane-swatchbatch">
+              <img src="assets/swatchbatch/swatchbatch-icon.svg" alt="" class="tool-tile-icon" width="48" height="48">
+              <span class="tool-tile-name">SwatchBatch</span>
+              <span class="tool-tile-pill badge-desktop">Windows</span>
+            </button>
+
+            <!-- Tile 2: EaselEase -->
+            <button type="button" class="tool-tile" data-tool="easelease" data-accent="green" role="tab" aria-selected="false" aria-controls="pane-easelease">
+              <img src="assets/easelease/easelease-icon.svg" alt="" class="tool-tile-icon" width="48" height="48">
+              <span class="tool-tile-name">EaselEase</span>
+              <span class="tool-tile-pill badge-webapp">Free Web</span>
+            </button>
+
+            <!-- Tile 3: CareerClimb -->
+            <button type="button" class="tool-tile" data-tool="careerclimb" data-accent="coral" role="tab" aria-selected="false" aria-controls="pane-careerclimb">
+              <img src="assets/careerclimb/careerclimb-icon.svg" alt="" class="tool-tile-icon" width="48" height="48">
+              <span class="tool-tile-name">CareerClimb</span>
+              <span class="tool-tile-pill badge-soon">Soon</span>
+            </button>
+
+            <!-- Tile 4: MoodletMixer -->
+            <button type="button" class="tool-tile" data-tool="moodletmixer" data-accent="indigo" role="tab" aria-selected="false" aria-controls="pane-moodletmixer">
+              <img src="assets/moodletmixer/moodletmixer-icon.svg" alt="" class="tool-tile-icon" width="48" height="48">
+              <span class="tool-tile-name">MoodletMixer</span>
+              <span class="tool-tile-pill badge-soon">Soon</span>
+            </button>
+
+            <!-- Tile 5: & more to come -->
+            <button type="button" class="tool-tile tool-tile-more" data-tool="more" data-accent="purple" role="tab" aria-selected="false" aria-controls="pane-more">
+              <span class="tool-tile-more-icon" aria-hidden="true">✦</span>
+              <span class="tool-tile-name">&amp; more to come</span>
+              <span class="tool-tile-pill badge-desktop">Studio</span>
+            </button>
+          </div>
+
+          <!-- Spotlight Card with Left / Right Arrows -->
+          <div class="spotlight-stage">
+            <button type="button" class="spotlight-arrow" id="spotlight-prev" aria-label="Previous tool">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="tool-detail-panel">
+              <!-- Pane 1: SwatchBatch -->
+              <div id="pane-swatchbatch" class="tool-detail-pane is-active" data-tool="swatchbatch" role="tabpanel">
+                <div class="flagship-top">
+                  <a href="swatchbatch.html" class="flagship-brand-link">
+                    <div class="flagship-brand-row">
+                      <img src="assets/swatchbatch/swatchbatch-icon.svg" alt="SwatchBatch icon" class="flagship-tool-icon" width="46" height="46">
+                      <div class="flagship-brand">
+                        <h2>SwatchBatch</h2>
+                        <small>Easily Recolor Sims 4 Objects &amp; Furniture</small>
+                      </div>
+                    </div>
+                  </a>
+                  <span class="flagship-badge badge-desktop">Windows 64-bit</span>
+                </div>
+
+                <p class="flagship-pitch">
+                  Ever wanted to easily recolor a Sims 4 bed or sofa in your exact favorite shade or fabric pattern? SwatchBatch is a friendly offline desktop app that lets you recolor easy CC with a magnetic lasso, keep original shading, and export standalone <code>.package</code> files ready for your Mods folder. No Blender needed!
+                </p>
+
+                <div class="flagship-tags">
+                  <span class="tag-pill">Object Recolors</span>
+                  <span class="tag-pill">Magnetic Lasso</span>
+                  <span class="tag-pill">Shading Engine</span>
+                  <span class="tag-pill">Fabric Patterns</span>
+                  <span class="tag-pill">Standalone Packages</span>
+                  <span class="tag-pill">100% Offline</span>
+                </div>
+
+                <div class="flagship-actions">
+                  <a href="https://github.com/in44es/swatchbatch/releases/latest/download/SwatchBatch-Demo-Setup.exe" class="btn btn-primary" download="SwatchBatch-Demo-Setup.exe">
+                    Download Free Demo (.exe)
+                  </a>
+                  <span class="btn btn-disabled" aria-disabled="true" title="Full edition coming soon on itch.io">
+                    <span class="badge-pill-inline">Coming Soon</span> Full (€5)
+                  </span>
+                  <a href="swatchbatch.html" class="flagship-more">Explore SwatchBatch &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Pane 2: EaselEase -->
+              <div id="pane-easelease" class="tool-detail-pane" data-tool="easelease" role="tabpanel">
+                <div class="flagship-top">
+                  <a href="easelease.html" class="flagship-brand-link">
+                    <div class="flagship-brand-row">
+                      <img src="assets/easelease/easelease-icon.svg" alt="EaselEase icon" class="flagship-tool-icon" width="46" height="46">
+                      <div class="flagship-brand">
+                        <h2>EaselEase</h2>
+                        <small>Make Sims 4 Custom Paintings CC Online</small>
+                      </div>
+                    </div>
+                  </a>
+                  <span class="flagship-badge badge-webapp">100% Free · In Browser</span>
+                </div>
+
+                <p class="flagship-pitch">
+                  Want to make custom Sims 4 paintings CC from your real-life pet portraits, favorite art, or family photos? EaselEase runs directly in your web browser with zero installation. Turn any image into playable in-game easel paintings (so your Sim actually paints them live!) or decorative wall canvases.
+                </p>
+
+                <div class="flagship-tags">
+                  <span class="tag-pill" style="border-color: #c9eed8;">Playable Easel Paintings</span>
+                  <span class="tag-pill" style="border-color: #c9eed8;">Wall Canvas Decor</span>
+                  <span class="tag-pill" style="border-color: #c9eed8;">Zero Installation</span>
+                  <span class="tag-pill" style="border-color: #c9eed8;">Runs in Browser</span>
+                  <span class="tag-pill" style="border-color: #c9eed8;">100% Free Forever</span>
+                </div>
+
+                <div class="flagship-actions">
+                  <a href="easelease.html" class="btn btn-green">
+                    Launch Online (Free)
+                  </a>
+                  <a href="easelease.html" class="flagship-more" style="color: var(--green);">Explore EaselEase &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Pane 3: CareerClimb -->
+              <div id="pane-careerclimb" class="tool-detail-pane" data-tool="careerclimb" role="tabpanel">
+                <div class="flagship-top">
+                  <div class="flagship-brand-row">
+                    <img src="assets/careerclimb/careerclimb-icon.svg" alt="CareerClimb icon" class="flagship-tool-icon" width="46" height="46">
+                    <div class="flagship-brand">
+                      <h2>CareerClimb</h2>
+                      <small>Custom Sims 4 Career Creator</small>
+                    </div>
+                  </div>
+                  <div class="upcoming-badges">
+                    <span class="flagship-badge badge-soon">Coming Soon</span>
+                    <span class="flagship-badge badge-webapp">In Browser</span>
                   </div>
                 </div>
-              </a>
-              <span class="flagship-badge badge-desktop">Windows 64-bit</span>
-            </div>
 
-            <p class="flagship-pitch">
-              Ever wanted to easily recolor a Sims 4 bed or sofa in your exact favorite shade or fabric pattern? SwatchBatch is a friendly offline desktop app that lets you recolor easy CC with a magnetic lasso, keep original shading, and export standalone <code>.package</code> files ready for your Mods folder. No Blender needed!
-            </p>
+                <p class="flagship-pitch">
+                  Design custom Sims 4 careers visually without touching messy XML tuning files. Set up ranks, hourly wages, schedules, skill &amp; mood promotion goals, and export ready-to-play <code>.package</code> + <code>.ts4script</code> mods in minutes.
+                </p>
 
-            <div class="flagship-tags">
-              <span class="tag-pill">Object Recolors</span>
-              <span class="tag-pill">Magnetic Lasso</span>
-              <span class="tag-pill">Shading Engine</span>
-              <span class="tag-pill">Fabric Patterns</span>
-              <span class="tag-pill">Standalone Packages</span>
-              <span class="tag-pill">100% Offline</span>
-            </div>
+                <div class="flagship-tags">
+                  <span class="tag-pill" style="border-color: #f5c8d2;">Custom Careers</span>
+                  <span class="tag-pill" style="border-color: #f5c8d2;">No XML Editing</span>
+                  <span class="tag-pill" style="border-color: #f5c8d2;">.package + .ts4script</span>
+                  <span class="tag-pill" style="border-color: #f5c8d2;">Diagnostic Linter</span>
+                </div>
 
-            <div class="flagship-actions">
-              <a href="https://github.com/in44es/swatchbatch/releases/latest/download/SwatchBatch-Demo-Setup.exe" class="btn btn-primary" download="SwatchBatch-Demo-Setup.exe">
-                Download Free Demo (.exe)
-              </a>
-              <span class="btn btn-disabled" aria-disabled="true" title="Full edition coming soon on itch.io">
-                <span class="badge-pill-inline">Coming Soon</span> Full (€5)
-              </span>
-              <a href="swatchbatch.html" class="flagship-more">Explore SwatchBatch &rarr;</a>
-            </div>
-          </div>
+                <div class="flagship-actions">
+                  <a href="https://in44es.itch.io" class="btn btn-secondary" target="_blank" rel="noopener">
+                    Follow on itch.io for release &rarr;
+                  </a>
+                  <span class="upcoming-status-text" style="margin-left: auto;">In active development</span>
+                </div>
+              </div>
 
-          <!-- Card 2: EaselEase -->
-          <div class="flagship-card flagship-card-easel" data-href="easelease.html" tabindex="0" role="link" aria-label="Go to EaselEase page">
-            <div class="flagship-top">
-              <a href="easelease.html" class="flagship-brand-link">
-                <div class="flagship-brand-row">
-                  <img src="assets/easelease/easelease-icon.svg" alt="EaselEase icon" class="flagship-tool-icon" width="46" height="46">
-                  <div class="flagship-brand">
-                    <h2>EaselEase</h2>
-                    <small>Make Sims 4 Custom Paintings CC Online</small>
+              <!-- Pane 4: MoodletMixer -->
+              <div id="pane-moodletmixer" class="tool-detail-pane" data-tool="moodletmixer" role="tabpanel">
+                <div class="flagship-top">
+                  <div class="flagship-brand-row">
+                    <img src="assets/moodletmixer/moodletmixer-icon.svg" alt="MoodletMixer icon" class="flagship-tool-icon" width="46" height="46">
+                    <div class="flagship-brand">
+                      <h2>MoodletMixer</h2>
+                      <small>Custom Sims 4 Buff &amp; Moodlet Creator</small>
+                    </div>
+                  </div>
+                  <div class="upcoming-badges">
+                    <span class="flagship-badge badge-soon">Coming Soon</span>
+                    <span class="flagship-badge badge-indigo">Windows 64-bit</span>
                   </div>
                 </div>
-              </a>
-              <span class="flagship-badge badge-webapp">100% Free · In Browser</span>
+
+                <p class="flagship-pitch">
+                  Craft custom Sims 4 buffs and moodlets through a guided 5-step workshop. Choose emotions, custom icons, durations, skill &amp; need modifiers, and weather, trait, or object triggers—100% locally with zero manual modding.
+                </p>
+
+                <div class="flagship-tags">
+                  <span class="tag-pill" style="border-color: #cad8f5;">Custom Moodlets</span>
+                  <span class="tag-pill" style="border-color: #cad8f5;">Emotions &amp; Effects</span>
+                  <span class="tag-pill" style="border-color: #cad8f5;">Rules &amp; Triggers</span>
+                  <span class="tag-pill" style="border-color: #cad8f5;">100% Offline</span>
+                </div>
+
+                <div class="flagship-actions">
+                  <a href="https://in44es.itch.io" class="btn btn-secondary" target="_blank" rel="noopener">
+                    Follow on itch.io for release &rarr;
+                  </a>
+                  <span class="upcoming-status-text" style="margin-left: auto;">In active development</span>
+                </div>
+              </div>
+
+              <!-- Pane 5: & more to come -->
+              <div id="pane-more" class="tool-detail-pane" data-tool="more" role="tabpanel">
+                <div class="flagship-top">
+                  <div class="flagship-brand-row">
+                    <span class="tool-tile-more-icon" style="width: 46px; height: 46px; font-size: 20px;" aria-hidden="true">✦</span>
+                    <div class="flagship-brand">
+                      <h2>&amp; more to come</h2>
+                      <small>The Easy4CC Studio Roadmap</small>
+                    </div>
+                  </div>
+                  <span class="flagship-badge badge-desktop">Easy4CC Studio</span>
+                </div>
+
+                <p class="flagship-pitch">
+                  Easy4CC is building a complete suite of beginner-friendly, zero-Blender utilities for The Sims 4 players—from object recolors and custom paintings to careers, moodlets, and more gameplay customization tools on the way.
+                </p>
+
+                <div class="flagship-actions">
+                  <a href="https://in44es.itch.io" class="btn btn-primary" target="_blank" rel="noopener">
+                    Follow on itch.io &rarr;
+                  </a>
+                  <a href="faq.html" class="flagship-more">Read FAQ &amp; Guide &rarr;</a>
+                </div>
+              </div>
             </div>
 
-            <p class="flagship-pitch">
-              Want to make custom Sims 4 paintings CC from your real-life pet portraits, favorite art, or family photos? EaselEase runs directly in your web browser with zero installation. Turn any image into playable in-game easel paintings (so your Sim actually paints them live!) or decorative wall canvases.
-            </p>
-
-            <div class="flagship-tags">
-              <span class="tag-pill" style="border-color: #c9eed8;">Playable Easel Paintings</span>
-              <span class="tag-pill" style="border-color: #c9eed8;">Wall Canvas Decor</span>
-              <span class="tag-pill" style="border-color: #c9eed8;">Zero Installation</span>
-              <span class="tag-pill" style="border-color: #c9eed8;">Runs in Browser</span>
-              <span class="tag-pill" style="border-color: #c9eed8;">100% Free Forever</span>
-            </div>
-
-            <div class="flagship-actions">
-              <a href="easelease.html" class="btn btn-green">
-                Launch Online (Free)
-              </a>
-              <a href="easelease.html" class="flagship-more" style="color: var(--green);">Explore EaselEase &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Future Tools Teaser -->
-        <div class="studio-more-banner">
-          <div>
-            <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 4px;">
-              ✨ More Simple Tools Coming for The Sims 4 Players
-            </h3>
-            <p style="font-size: 13px; color: var(--muted);">
-              Easy4CC is actively developing more straightforward utilities to customize your Sims 4 gameplay. Follow on itch.io to stay updated on future releases!
-            </p>
-          </div>
-          <a href="https://in44es.itch.io" class="btn btn-secondary" target="_blank" rel="noopener">
-            Follow on itch.io &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Quick Beginner Guide: How to Make Sims 4 CC -->
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">HOW TO MAKE SIMS 4 CC</div>
-          <h2>Create your first Sims 4 CC in 3 simple steps</h2>
-          <p>Whether you want to recolor Sims 4 furniture or make custom wall art, Easy4CC handles the technical packaging for you.</p>
-        </div>
-
-        <div class="workflow-steps-grid">
-          <div class="panel step-card">
-            <span class="step-badge">STEP 01</span>
-            <h3>Pick your CC tool</h3>
-            <p>Use <a href="swatchbatch.html"><strong>SwatchBatch</strong></a> to easily recolor Sims 4 furniture and objects, or open <a href="easelease.html"><strong>EaselEase</strong></a> in your browser to make custom paintings CC.</p>
-          </div>
-          <div class="panel step-card">
-            <span class="step-badge">STEP 02</span>
-            <h3>Recolor or upload art</h3>
-            <p>Choose custom hex colors, tile seamless fabric patterns with realistic shading, or upload any photo—no Blender or 3D modeling required.</p>
-          </div>
-          <div class="panel step-card">
-            <span class="step-badge">STEP 03</span>
-            <h3>Export .package &amp; play</h3>
-            <p>Download your standalone <code>.package</code> file, drop it into your <code>Documents/Electronic Arts/The Sims 4/Mods</code> folder, and enjoy your new CC in-game.</p>
+            <button type="button" class="spotlight-arrow" id="spotlight-next" aria-label="Next tool">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -311,7 +412,7 @@
           Simple customization tools for The Sims 4 players. <span style="color: var(--primary); font-weight: 600;">easy4cc.com</span>
         </p>
         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-          <a href="https://in44es.itch.io/easelease" class="btn btn-secondary" target="_blank" rel="noopener">EaselEase (Free Web) ↗</a>
+          <a href="easelease.html" class="btn btn-secondary">EaselEase (Free Web)</a>
           <a href="https://github.com/in44es/swatchbatch/releases/latest/download/SwatchBatch-Demo-Setup.exe" class="btn btn-primary" download="SwatchBatch-Demo-Setup.exe">SwatchBatch Demo</a>
         </div>
       </div>

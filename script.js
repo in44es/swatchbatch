@@ -51,4 +51,62 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+
+  // Interactive Tools Dock + Spotlight Arrows
+  const toolTiles = Array.from(document.querySelectorAll('.tool-tile[data-tool]'))
+  const toolPanes = Array.from(document.querySelectorAll('.tool-detail-pane[data-tool]'))
+  if (toolTiles.length && toolPanes.length) {
+    let activeIndex = Math.max(0, toolTiles.findIndex((t) => t.classList.contains('is-active')))
+
+    const activateTool = (toolId) => {
+      const nextIndex = toolTiles.findIndex((tile) => tile.getAttribute('data-tool') === toolId)
+      if (nextIndex === -1) return
+      activeIndex = nextIndex
+      toolTiles.forEach((tile, idx) => {
+        const isMatch = idx === nextIndex
+        tile.classList.toggle('is-active', isMatch)
+        tile.setAttribute('aria-selected', isMatch ? 'true' : 'false')
+      })
+      toolPanes.forEach((pane) => {
+        pane.classList.toggle('is-active', pane.getAttribute('data-tool') === toolId)
+      })
+    }
+
+    toolTiles.forEach((tile) => {
+      const toolId = tile.getAttribute('data-tool')
+      tile.addEventListener('mouseenter', () => activateTool(toolId))
+      tile.addEventListener('focus', () => activateTool(toolId))
+      tile.addEventListener('click', () => activateTool(toolId))
+    })
+
+    const prevBtn = document.getElementById('spotlight-prev')
+    const nextBtn = document.getElementById('spotlight-next')
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const nextIdx = (activeIndex - 1 + toolTiles.length) % toolTiles.length
+        activateTool(toolTiles[nextIdx].getAttribute('data-tool'))
+      })
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const nextIdx = (activeIndex + 1) % toolTiles.length
+        activateTool(toolTiles[nextIdx].getAttribute('data-tool'))
+      })
+    }
+
+    // Support direct hash links like #tool-careerclimb or #tool-moodletmixer
+    const syncFromHash = () => {
+      const hash = window.location.hash
+      if (hash && hash.startsWith('#tool-')) {
+        const toolId = hash.replace('#tool-', '')
+        activateTool(toolId)
+        const showcase = document.getElementById('tools-showcase')
+        if (showcase) {
+          showcase.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }
+    }
+    syncFromHash()
+    window.addEventListener('hashchange', syncFromHash)
+  }
 })

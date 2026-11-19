@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" fill="none">
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="#eef3fc" stroke="#cad8f5" stroke-width="2"/>
+  <g transform="translate(4, 4)">
+    <!-- Back moodlet card -->
+    <g transform="rotate(-10 24 28)">
+      <rect x="9" y="12" width="24" height="30" rx="5" fill="#3e8a6e" stroke="#302b46" stroke-width="2.4"/>
+    </g>
+    <!-- Front moodlet card -->
+    <g transform="rotate(8 34 30)">
+      <rect x="21" y="14" width="26" height="32" rx="5" fill="#5b73d6" stroke="#302b46" stroke-width="2.4"/>
+      <rect x="25.5" y="19" width="17" height="14" rx="3" fill="#fdfcff"/>
+      <!-- Mood diamond / plumbob-inspired motif -->
+      <path d="M34 21.5L38.5 26L34 30.5L29.5 26L34 21.5Z" fill="#c85d78" stroke="#302b46" stroke-width="1.6" stroke-linejoin="round"/>
+      <line x1="27" y1="38.5" x2="41" y2="38.5" stroke="#fdfcff" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <!-- Mixing sparkle -->
+    <circle cx="15" cy="11" r="2.6" fill="#c85d78" stroke="#302b46" stroke-width="1.6"/>
+    <circle cx="48" cy="11" r="2.2" fill="#7354bb" stroke="#302b46" stroke-width="1.5"/>
+  </g>
+</svg>
