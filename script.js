@@ -128,4 +128,170 @@ document.addEventListener('DOMContentLoaded', () => {
     syncFromHash()
     window.addEventListener('hashchange', syncFromHash)
   }
+
+  // Shared Contact / Report a Bug Modal
+  const CONTACT_EMAIL = 'ines@easy4cc.com'
+  const bugButtons = document.querySelectorAll('[data-open-bug-modal]')
+  if (bugButtons.length) {
+    const dialog = document.createElement('dialog')
+    dialog.className = 'atelier-dialog'
+    dialog.setAttribute('aria-labelledby', 'atelier-bug-title')
+    dialog.innerHTML = `
+      <div class="atelier-dialog-inner">
+        <div class="atelier-dialog-head">
+          <div>
+            <div class="eyebrow" style="margin-bottom: 6px;"><span>✦</span> CONTACT &amp; SUPPORT</div>
+            <h2 id="atelier-bug-title" style="margin: 0; font-size: 22px; line-height: 1.2;">Report a Bug or Send a Message</h2>
+          </div>
+          <button type="button" class="atelier-dialog-close" aria-label="Close">×</button>
+        </div>
+        <p style="margin: 0; font-size: 13.5px; color: var(--muted);">
+          Send a message directly to <strong style="color: var(--blue);">${CONTACT_EMAIL}</strong>
+          <button type="button" id="bug-copy-email" style="background:none;border:0;color:var(--blue);font-weight:800;cursor:pointer;text-decoration:underline;margin-left:4px;">(Copy email)</button><br>
+          Please don&apos;t hesitate to include screenshots — seeing what happened helps me fix issues much faster!
+        </p>
+        <form id="atelier-bug-form" style="display: grid; gap: 12px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <label class="atelier-form-field">
+              Type
+              <select id="bug-type">
+                <option value="Bug Report">Bug Report</option>
+                <option value="Feature Idea">Feature Idea</option>
+                <option value="Question">Question / Feedback</option>
+              </select>
+            </label>
+            <label class="atelier-form-field">
+              Tool / Page
+              <select id="bug-tool">
+                <option value="Website">Easy4CC Website</option>
+                <option value="EaselEase">EaselEase</option>
+                <option value="SwatchBatch">SwatchBatch</option>
+                <option value="CareerClimb">CareerClimb</option>
+                <option value="MoodletMixer">MoodletMixer</option>
+              </select>
+            </label>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <label class="atelier-form-field">
+              Subject
+              <input type="text" id="bug-subject" placeholder="Short summary">
+            </label>
+            <label class="atelier-form-field">
+              Your email (optional)
+              <input type="email" id="bug-reply" placeholder="you@example.com">
+            </label>
+          </div>
+          <label class="atelier-form-field">
+            Message *
+            <textarea id="bug-message" rows="4" required placeholder="Describe what happened or share your feedback..."></textarea>
+          </label>
+          <div style="padding: 10px 12px; border-radius: 14px; border: 1.5px dashed var(--border-soft); background: #FFFFFF; display: grid; gap: 8px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+              <span style="font-size: 12.5px; font-weight: 700; color: var(--ink);">Screenshots (optional — feel free to attach one or more!)</span>
+              <button type="button" id="bug-add-files" class="btn btn-secondary" style="min-height: 32px; padding: 4px 12px; font-size: 12px;">+ Add image(s)</button>
+              <input type="file" id="bug-files" accept="image/*" multiple style="display: none;">
+            </div>
+            <div id="bug-previews" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+            <small id="bug-file-note" style="display: none; font-size: 11.5px; color: var(--muted);">Remember to attach these image(s) in your email window before sending.</small>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+            <button type="submit" class="btn btn-primary">Send Message ✉</button>
+            <button type="button" id="bug-copy-msg" class="btn btn-secondary">Copy for Webmail</button>
+            <span id="bug-status" style="font-size: 12.5px; font-weight: 800; color: var(--green);"></span>
+          </div>
+        </form>
+      </div>
+    `
+    document.body.appendChild(dialog)
+
+    const closeBtn = dialog.querySelector('.atelier-dialog-close')
+    const form = dialog.querySelector('#atelier-bug-form')
+    const fileInput = dialog.querySelector('#bug-files')
+    const addFilesBtn = dialog.querySelector('#bug-add-files')
+    const previews = dialog.querySelector('#bug-previews')
+    const fileNote = dialog.querySelector('#bug-file-note')
+    const statusEl = dialog.querySelector('#bug-status')
+    let attachedFiles = []
+
+    const renderPreviews = () => {
+      previews.innerHTML = ''
+      fileNote.style.display = attachedFiles.length ? 'block' : 'none'
+      attachedFiles.forEach((item, idx) => {
+        const wrap = document.createElement('div')
+        wrap.style.cssText = 'position:relative;width:68px;height:52px;border-radius:10px;overflow:hidden;border:1.5px solid var(--border-soft);'
+        wrap.innerHTML = `<img src="${item.url}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;">`
+        const rm = document.createElement('button')
+        rm.type = 'button'
+        rm.textContent = '×'
+        rm.style.cssText = 'position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;border:0;background:rgba(31,53,80,.85);color:#fff;font-size:11px;cursor:pointer;line-height:1;'
+        rm.addEventListener('click', () => {
+          URL.revokeObjectURL(item.url)
+          attachedFiles.splice(idx, 1)
+          renderPreviews()
+        })
+        wrap.appendChild(rm)
+        previews.appendChild(wrap)
+      })
+    }
+
+    addFilesBtn.addEventListener('click', () => fileInput.click())
+    fileInput.addEventListener('change', (e) => {
+      Array.from(e.target.files || []).forEach((f) => {
+        attachedFiles.push({ name: f.name, url: URL.createObjectURL(f) })
+      })
+      e.target.value = ''
+      renderPreviews()
+    })
+
+    const buildBody = () => {
+      const type = dialog.querySelector('#bug-type').value
+      const tool = dialog.querySelector('#bug-tool').value
+      const reply = dialog.querySelector('#bug-reply').value.trim()
+      const msg = dialog.querySelector('#bug-message').value.trim()
+      return [
+        `Type: ${type}`,
+        `Tool: ${tool}`,
+        reply ? `Reply-to: ${reply}` : null,
+        attachedFiles.length ? `Attached screenshots (${attachedFiles.length}): ${attachedFiles.map((f) => f.name).join(', ')}` : null,
+        '',
+        msg,
+      ].filter((x) => x !== null).join('\n')
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const type = dialog.querySelector('#bug-type').value
+      const tool = dialog.querySelector('#bug-tool').value
+      const subj = dialog.querySelector('#bug-subject').value.trim() || 'Feedback'
+      const fullSubj = `[${tool} - ${type}] ${subj}`
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(fullSubj)}&body=${encodeURIComponent(buildBody())}`
+    })
+
+    dialog.querySelector('#bug-copy-email').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(CONTACT_EMAIL)
+        statusEl.textContent = '✓ Email copied!'
+        setTimeout(() => { statusEl.textContent = '' }, 2200)
+      } catch {}
+    })
+
+    dialog.querySelector('#bug-copy-msg').addEventListener('click', async () => {
+      const type = dialog.querySelector('#bug-type').value
+      const tool = dialog.querySelector('#bug-tool').value
+      const subj = dialog.querySelector('#bug-subject').value.trim() || 'Feedback'
+      try {
+        await navigator.clipboard.writeText(`To: ${CONTACT_EMAIL}\nSubject: [${tool} - ${type}] ${subj}\n\n${buildBody()}`)
+        statusEl.textContent = '✓ Message copied!'
+        setTimeout(() => { statusEl.textContent = '' }, 2200)
+      } catch {}
+    })
+
+    closeBtn.addEventListener('click', () => dialog.close())
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close() })
+    bugButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (!dialog.open) dialog.showModal()
+      })
+    })
+  }
 })

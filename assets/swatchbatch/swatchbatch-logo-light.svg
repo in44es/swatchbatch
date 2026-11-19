@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="128" viewBox="0 0 256 64" fill="none">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="512" height="128" viewBox="0 0 256 64" fill="none">
 
   <g transform="translate(6, 4)">
     <g transform="rotate(22 18 44)">
-      <rect x="8" y="4" width="26" height="44" rx="6" fill="#c85d78" stroke="#302b46" stroke-width="2.4"/>
+      <rect x="8" y="4" width="26" height="44" rx="6" fill="#FF8A7A" stroke="#1F3550" stroke-width="2.4"/>
     </g>
     <g transform="rotate(10 18 44)">
-      <rect x="8" y="4" width="26" height="44" rx="6" fill="#3e8a6e" stroke="#302b46" stroke-width="2.4"/>
+      <rect x="8" y="4" width="26" height="44" rx="6" fill="#37C4D6" stroke="#1F3550" stroke-width="2.4"/>
     </g>
     <g transform="rotate(-4 18 44)">
-      <rect x="8" y="4" width="26" height="44" rx="6" fill="#7354bb" stroke="#302b46" stroke-width="2.4"/>
-      <rect x="12.5" y="9" width="17" height="22" rx="3" fill="#fdfcff"/>
+      <rect x="8" y="4" width="26" height="44" rx="6" fill="#7354bb" stroke="#1F3550" stroke-width="2.4"/>
+      <rect x="12.5" y="9" width="17" height="22" rx="3" fill="#FFFFFF"/>
       <path d="M15.5 22.5V19.5C15.5 18.67 16.17 18 17 18H25C25.83 18 26.5 18.67 26.5 19.5V22.5" stroke="#7354bb" stroke-width="1.8" stroke-linecap="round"/>
       <rect x="14.5" y="21.5" width="13" height="4.5" rx="1.5" fill="#7354bb"/>
-      <line x1="16.5" y1="26" x2="16.5" y2="27.8" stroke="#302b46" stroke-width="1.8" stroke-linecap="round"/>
-      <line x1="25.5" y1="26" x2="25.5" y2="27.8" stroke="#302b46" stroke-width="1.8" stroke-linecap="round"/>
-      <circle cx="21" cy="40" r="3.2" fill="#f4f1fb" stroke="#302b46" stroke-width="2"/>
+      <line x1="16.5" y1="26" x2="16.5" y2="27.8" stroke="#1F3550" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="25.5" y1="26" x2="25.5" y2="27.8" stroke="#1F3550" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="21" cy="40" r="3.2" fill="#F7FBFF" stroke="#1F3550" stroke-width="2"/>
     </g>
   </g>
-<text x="66" y="40" font-family="'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.8" fill="#302b46">Swatch<tspan fill="#7354bb">Batch</tspan></text>
+<text x="66" y="40" font-family="'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif" font-size="25" font-weight="800" letter-spacing="-0.8" fill="#1F3550">Swatch<tspan fill="#7354bb">Batch</tspan></text>
 </svg>

@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" fill="none">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" fill="none">
   <!-- Badge mark -->
   <g transform="translate(8, 6)">
     <rect x="18" y="22" width="92" height="92" rx="22" fill="rgba(0,0,0,0.22)"/>
-    <rect x="14" y="18" width="92" height="92" rx="22" fill="#ffffff" stroke="#302b46" stroke-width="4.5"/>
-    <rect x="29" y="42" width="62" height="15" rx="7.5" fill="#7354bb" stroke="#302b46" stroke-width="3.5"/>
-    <circle cx="71" cy="49.5" r="10.5" fill="#c85d78" stroke="#302b46" stroke-width="3.5"/>
-    <rect x="29" y="71" width="62" height="15" rx="7.5" fill="#3e8a6e" stroke="#302b46" stroke-width="3.5"/>
-    <circle cx="48" cy="78.5" r="10.5" fill="#ffffff" stroke="#302b46" stroke-width="3.5"/>
-    <path d="M101 5 L105.8 18.2 L119 23 L105.8 27.8 L101 41 L96.2 27.8 L83 23 L96.2 18.2 Z" fill="#c85d78" stroke="#302b46" stroke-width="3.5" stroke-linejoin="round"/>
+    <rect x="14" y="18" width="92" height="92" rx="22" fill="#ffffff" stroke="#1F3550" stroke-width="4.5"/>
+    <rect x="29" y="42" width="62" height="15" rx="7.5" fill="#7354bb" stroke="#1F3550" stroke-width="3.5"/>
+    <circle cx="71" cy="49.5" r="10.5" fill="#FF8A7A" stroke="#1F3550" stroke-width="3.5"/>
+    <rect x="29" y="71" width="62" height="15" rx="7.5" fill="#37C4D6" stroke="#1F3550" stroke-width="3.5"/>
+    <circle cx="48" cy="78.5" r="10.5" fill="#ffffff" stroke="#1F3550" stroke-width="3.5"/>
+    <path d="M101 5 L105.8 18.2 L119 23 L105.8 27.8 L101 41 L96.2 27.8 L83 23 L96.2 18.2 Z" fill="#FF8A7A" stroke="#1F3550" stroke-width="3.5" stroke-linejoin="round"/>
   </g>
   <!-- Wordmark for dark backgrounds -->
   <text x="150" y="92" font-family="'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="72" font-weight="800" letter-spacing="-2.5">
