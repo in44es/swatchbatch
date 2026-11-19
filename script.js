@@ -19,13 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 30) {
-        header.style.boxShadow = '0 8px 24px rgba(79, 53, 130, 0.08)'
-        header.style.background = 'rgba(244, 241, 251, 0.95)'
+        header.style.boxShadow = '0 12px 32px rgba(31, 53, 80, 0.12), 0 0 0 1px #CFE3F0'
+        header.style.background = 'rgba(255, 255, 255, 0.96)'
       } else {
-        header.style.boxShadow = 'none'
-        header.style.background = 'rgba(244, 241, 251, 0.85)'
+        header.style.boxShadow = '0 8px 28px rgba(46, 143, 208, 0.09), 0 0 0 1px #CFE3F0'
+        header.style.background = 'rgba(255, 255, 255, 0.88)'
       }
     }, { passive: true })
+  }
+
+  // Playful "joy bubble" on download / studio CTA clicks
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('a[download], .btn-primary, .btn-secondary').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const rect = btn.getBoundingClientRect()
+        const x = e.clientX || (rect.left + rect.width / 2)
+        const y = e.clientY || rect.top
+        const bubble = document.createElement('span')
+        bubble.className = 'joy-bubble'
+        bubble.textContent = btn.hasAttribute('download') ? '✦ Downloading!' : '✦ Let’s create!'
+        bubble.style.left = `${x}px`
+        bubble.style.top = `${y - 8}px`
+        document.body.appendChild(bubble)
+        setTimeout(() => bubble.remove(), 950)
+      })
+    })
   }
 
   // Clickable flagship cards navigating to their product page
