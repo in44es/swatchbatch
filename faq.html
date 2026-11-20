@@ -49,7 +49,7 @@
         "name": "How to make Sims 4 CC easily without Blender?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "With Easy4CC tools, beginners can make Sims 4 CC in minutes without learning Blender or 3D modeling. Use SwatchBatch to easily recolor Sims 4 furniture and objects with custom colors or fabric patterns, or use EaselEase in your browser to turn any photo into custom paintings CC."
+          "text": "With Easy4CC tools, beginners can make Sims 4 CC in minutes without learning Blender, 3D modeling, or having any modding skills. Use SwatchBatch to easily recolor Sims 4 furniture and objects with custom colors or fabric patterns, or use EaselEase in your browser to turn any photo into custom paintings CC."
         }
       },
       {
@@ -58,14 +58,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Open your object .package in SwatchBatch, trace the parts you want to change with the magnetic lasso, pick custom hex colors or seamless fabric patterns, and export a ready-to-play standalone .package file for your Mods folder."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need Blender or 3D modeling skills?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely not! SwatchBatch and EaselEase let you recolor objects and generate custom paintings directly without touching Blender or any 3D software."
         }
       },
       {
@@ -147,21 +139,40 @@
 
     <section>
       <div class="container">
-        <div class="faq-grid">
-          <details class="faq-item" open>
+        <div class="faq-tabs" role="tablist" aria-label="FAQ categories">
+          <button type="button" class="faq-tab is-active" id="faq-tab-getting-started" role="tab" aria-selected="true" aria-controls="faq-tabpanel" data-faq-tab="getting-started">
+            <span>Getting Started</span>
+            <span class="faq-tab-count">3</span>
+          </button>
+          <button type="button" class="faq-tab" id="faq-tab-tools" role="tab" aria-selected="false" aria-controls="faq-tabpanel" data-faq-tab="tools">
+            <span>Tools &amp; Setup</span>
+            <span class="faq-tab-count">3</span>
+          </button>
+          <button type="button" class="faq-tab" id="faq-tab-safety" role="tab" aria-selected="false" aria-controls="faq-tabpanel" data-faq-tab="safety">
+            <span>Safety &amp; Policies</span>
+            <span class="faq-tab-count">4</span>
+          </button>
+          <button type="button" class="faq-tab" id="faq-tab-all" role="tab" aria-selected="false" aria-controls="faq-tabpanel" data-faq-tab="all">
+            <span>All Questions</span>
+            <span class="faq-tab-count">10</span>
+          </button>
+        </div>
+
+        <div class="faq-grid" id="faq-tabpanel" role="tabpanel" aria-labelledby="faq-tab-getting-started">
+          <details class="faq-item" data-faq-category="getting-started" open>
             <summary>
               <span>How to make Sims 4 CC easily without Blender?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
             </summary>
             <div class="faq-content">
-              Making custom content for The Sims 4 doesn't require 3D modeling! With <strong>Easy4CC</strong>, you can make Sims 4 CC in minutes:
+              Making custom content for The Sims 4 doesn't require 3D modeling or any prior experience — even with zero modding skills! With <strong>Easy4CC</strong>, you can make Sims 4 CC in minutes:
               <br><br>
               &bull; Use <a href="swatchbatch.html"><strong>SwatchBatch</strong></a> to easily recolor Sims 4 furniture and objects with custom hex colors or fabric patterns.<br>
               &bull; Use <a href="easelease.html"><strong>EaselEase</strong></a> free in your browser to turn personal photos or artwork into playable easel paintings and wall art CC.
             </div>
           </details>
 
-          <details class="faq-item" open>
+          <details class="faq-item" data-faq-category="getting-started" open>
             <summary>
               <span>How can I easily recolor Sims 4 furniture and CC?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -171,7 +182,7 @@
             </div>
           </details>
 
-          <details class="faq-item" open>
+          <details class="faq-item" data-faq-category="getting-started" open>
             <summary>
               <span>How do I install my creations into The Sims 4?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -186,17 +197,7 @@
             </div>
           </details>
 
-          <details class="faq-item" open>
-            <summary>
-              <span>Do I need Blender or 3D modeling skills?</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-            </summary>
-            <div class="faq-content">
-              <strong>Absolutely not!</strong> That's the entire purpose of Easy4CC tools. Traditional modding tutorials often ask players to install Blender, learn 3D UV unwrapping, and configure complex shader nodes just to change a couch color. Our tools let you recolor objects and generate custom paintings directly, without touching any 3D software.
-            </div>
-          </details>
-
-          <details class="faq-item">
+          <details class="faq-item" data-faq-category="tools" open>
             <summary>
               <span>What is the difference between SwatchBatch and EaselEase?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -208,7 +209,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" data-faq-category="tools">
             <summary>
               <span>Will these creations overwrite existing game items?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -220,7 +221,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" data-faq-category="tools">
             <summary>
               <span>Do I need Sims 4 Studio installed?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -232,7 +233,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" data-faq-category="safety" open>
             <summary>
               <span>Are these tools safe to use?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -242,7 +243,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" data-faq-category="safety">
             <summary>
               <span>Why does Windows SmartScreen warn me when opening SwatchBatch?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -252,7 +253,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" data-faq-category="safety">
             <summary>
               <span>Can I modify, re-upload, or redistribute Easy4CC tools and files?</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
@@ -264,7 +265,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" data-faq-category="safety">
             <summary>
               <span>Do you use AI? (Transparency & Disclosure)</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>

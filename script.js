@@ -294,4 +294,70 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
+
+  // FAQ Category Tabs
+  const faqTabs = Array.from(document.querySelectorAll('.faq-tab[data-faq-tab]'))
+  const faqItems = Array.from(document.querySelectorAll('.faq-item[data-faq-category]'))
+  const faqPanel = document.getElementById('faq-tabpanel')
+  if (faqTabs.length && faqItems.length) {
+    const activateFaqTab = (category) => {
+      const targetTab = faqTabs.find((tab) => tab.getAttribute('data-faq-tab') === category)
+      if (!targetTab) return
+
+      faqTabs.forEach((tab) => {
+        const isMatch = tab === targetTab
+        tab.classList.toggle('is-active', isMatch)
+        tab.setAttribute('aria-selected', isMatch ? 'true' : 'false')
+        tab.setAttribute('tabindex', isMatch ? '0' : '-1')
+      })
+
+      if (faqPanel && targetTab.id) {
+        faqPanel.setAttribute('aria-labelledby', targetTab.id)
+      }
+
+      faqItems.forEach((item) => {
+        const itemCat = item.getAttribute('data-faq-category')
+        item.hidden = category !== 'all' && itemCat !== category
+      })
+    }
+
+    faqTabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => {
+        activateFaqTab(tab.getAttribute('data-faq-tab'))
+      })
+
+      tab.addEventListener('keydown', (e) => {
+        let nextIdx = null
+        if (e.key === 'ArrowRight') nextIdx = (idx + 1) % faqTabs.length
+        else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + faqTabs.length) % faqTabs.length
+        else if (e.key === 'Home') nextIdx = 0
+        else if (e.key === 'End') nextIdx = faqTabs.length - 1
+
+        if (nextIdx !== null) {
+          e.preventDefault()
+          const nextTab = faqTabs[nextIdx]
+          activateFaqTab(nextTab.getAttribute('data-faq-tab'))
+          nextTab.focus()
+        }
+      })
+    })
+
+    const syncFaqFromHash = () => {
+      const hash = window.location.hash
+      if (hash && hash.startsWith('#faq-')) {
+        const cat = hash.replace('#faq-', '')
+        if (faqTabs.some((t) => t.getAttribute('data-faq-tab') === cat)) {
+          activateFaqTab(cat)
+          return true
+        }
+      }
+      return false
+    }
+
+    if (!syncFaqFromHash()) {
+      const initialTab = faqTabs.find((t) => t.classList.contains('is-active')) || faqTabs[0]
+      activateFaqTab(initialTab.getAttribute('data-faq-tab'))
+    }
+    window.addEventListener('hashchange', syncFaqFromHash)
+  }
 })
