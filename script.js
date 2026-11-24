@@ -360,4 +360,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('hashchange', syncFaqFromHash)
   }
+
+  // Embedded itch.io popup checkout for SwatchBatch Full
+  const itchBuyButtons = Array.from(document.querySelectorAll('[data-itch-buy]'))
+  if (itchBuyButtons.length) {
+    const attachItchButtons = () => {
+      if (!window.Itch || typeof window.Itch.attachBuyButton !== 'function') return
+      itchBuyButtons.forEach((btn) => {
+        if (btn.dataset.itchAttached) return
+        const game = btn.getAttribute('data-itch-buy')
+        if (!game) return
+        btn.dataset.itchAttached = '1'
+        window.Itch.attachBuyButton(btn, { user: 'in44es', game })
+      })
+    }
+    if (window.Itch && typeof window.Itch.attachBuyButton === 'function') {
+      attachItchButtons()
+    } else if (!document.querySelector('script[src="https://static.itch.io/api.js"]')) {
+      const itchScript = document.createElement('script')
+      itchScript.src = 'https://static.itch.io/api.js'
+      itchScript.async = true
+      itchScript.addEventListener('load', attachItchButtons)
+      document.head.appendChild(itchScript)
+    }
+  }
 })
