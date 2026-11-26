@@ -73,7 +73,553 @@ Error generating stack: `+e.message+`
       </L>
     </U>
   </L>
-</I>`,c=t.encode(s);return e.push({type:2113017500,group:0,instance:ci,data:c,memorySize:c.length,compression:0,flags:1}),vr(e)}var gi=`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AQgBBAEOAggBEAEQAgQBcnwAAABjBAAAAAAAAAAJAAAACQAAAEMAAABzygAAAHhOZAFEAF1GfQR0AHwCfASDAnIGeSJ0AXwCfASDAn0FfAVkAGsJcjR0AnwAfAR8BYMDAQBXAHEGBAB0A2sKckoBAAEAAQBZAHEGWABxBlcAdAF8AGQCZACDA2QAawhyeHQBfAJkAmQAgwNkAGsJcnh8AmoEfABfBHwDZABrCHKEZANTAHwDfABfBXQGoAd8AXQIoQJ9BnQJoAp0C2oMoQF9B3wHZABrCXLGdA18B3wGdAtqDIMDfQh8CGQAawlyxnwIfABfDmQEUwApBU4pHnJOAAAAWhZwaGFzZV9pbnRlcmFjdGlvbl9uYW1lWhJyZWNpcGVfZGVzY3JpcHRpb25aD21hc3RlcndvcmtfbmFtZVoPY3JhZnRlZF9ieV90ZXh0Wg1pY29uX292ZXJyaWRlclQAAABaDV9maXJzdF9waGFzZXNaB19waGFzZXNaFl9maXJzdF9waGFzZV9pbnN0YW5jZXNaEV9pbnN0YW5jZWRfcGhhc2VzWhdfdmlzaWJsZV9waGFzZV9zZXF1ZW5jZVoUaGFzX2luc3RhbmNlZF9waGFzZXNaDWNyYWZ0aW5nX2Nvc3RaD3NraWxsX2xvb3RfZGF0YXJaAAAAWhFyZXN1bWVfYWZmb3JkYW5jZVoPYXV0b25vbXlfd2VpZ2h0WhBhZGRpdGlvbmFsX3Rlc3RzWhdidWZmX3dlaWdodF9tdWx0aXBsaWVyc1oJbW9vZF9saXN0Wg1fcmV0YWlsX3ByaWNlWglyZXN1bWFibGVaE2NyYWZ0X2luaXRpYWxfc3RhdGVaD3VzZV9pbmdyZWRpZW50c1oMdXRpbGl0eV9pbmZvWhhzaW1vbGVvbl92YWx1ZV9tb2RpZmllcnNaGnNpbW9sZW9uX3ZhbHVlX3NraWxsX2N1cnZlWhBtYXN0ZXJ3b3Jrc19kYXRhWhlxdWFsaXR5X2NvbnRyb2xfc3RhdGlzdGlj2gpza2lsbF90ZXN0RlQpD3J2AAAAchwAAADaB3NldGF0dHJyKgAAAHJ9AAAAcmAAAADaG1NUWUxFX0NBVEVHT1JZX0JZX1JFQ0lQRV9JRHJMAAAA2hdDVVNUT01fUk9PVF9DQVRFR09SWV9JRNoIc2VydmljZXPaFGdldF9p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`;function _i(e){let t=atob(e),n=new Uint8Array(t.length);for(let e=0;e<t.length;e++)n[e]=t.charCodeAt(e);return n}function vi(){return ur({"easelease_custom_paintings.pyc":_i(gi)})}function yi(){let e=ur({"EaselEase_CustomPaintings_Core.package":hi(),"EaselEase_CustomPaintings.ts4script":vi(),"README_INSTALLATION.txt":new TextEncoder().encode(`EaselEase - Custom Paintings Pie Menu Mod
+</I>`,c=t.encode(s);return e.push({type:2113017500,group:0,instance:ci,data:c,memorySize:c.length,compression:0,flags:1}),vr(e)}function gi(){return`# EaselEase Custom Paintings Pie Menu & Random Pool Injector
+# Automatically discovers all EaselEase custom painting recipes (recipe_Custom_Painting_*)
+# and exposes them both in the dedicated "Custom Paintings..." pie menu and in EA's
+# classic easel painting styles so they are drawn at random alongside base game paintings.
+
+import functools
+import random as _py_random
+import services
+import sims4.log
+import sims4.random
+import sims4.resources
+from sims4.resources import Types
+from sims4.tuning.instance_manager import InstanceManager
+
+CUSTOM_INTERACTION_ID = ${si.toString()}
+CUSTOM_ROOT_CATEGORY_ID = ${li.toString()}
+STYLE_CATEGORY_BY_RECIPE_ID = {
+${di.flatMap(e=>e.recipeIds.map(t=>`    ${t}: ${e.id.toString()},`)).join(`
+`)}
+}
+EA_EASEL_START_CRAFTING_ID = 13359
+EA_EASEL_OBJECT_IDS = (14898, 34819, 34820, 34821, 34822, 35225, 155175, 193977, 209561)
+VALID_EA_BASE_RECIPE_IDS = frozenset((
+    26675, 26676, 26678,
+    26872, 26874, 26875,
+    26900, 26901, 26902,
+    26930, 26931, 26932,
+    26935, 26936, 26937,
+    26944, 26945, 26946,
+))
+LEGACY_BASE_RECIPE_MAP = {
+    27249: 26944,
+    27250: 26945,
+    27251: 26946,
+}
+SMALL_RECIPE_IDS = frozenset((26678, 26875, 26902, 26932, 26937, 26946))
+MEDIUM_RECIPE_IDS = frozenset((26676, 26874, 26901, 26931, 26936, 26945))
+LARGE_RECIPE_IDS = frozenset((26675, 26872, 26900, 26930, 26935, 26944))
+RECIPE_PREFIX = 'recipe_Custom_Painting_'
+IMAGE_TYPE = 0x00B2D882
+CLASSIC_POOL_WEIGHT = 12.0
+LOGGER = sims4.log.Logger('EaselEase')
+
+_original_load_data = InstanceManager.load_data_into_class_instances
+
+
+class _AlwaysPassTests:
+    @staticmethod
+    def run_tests(resolver):
+        return True
+
+
+class _CustomPaintingTexture:
+    for_puzzles = False
+
+    def __init__(self, texture_key, base_canvas_state, canvas_types, tests):
+        self.texture = texture_key
+        self._base_canvas_state = base_canvas_state
+        self.canvas_types = canvas_types
+        self.tests = tests
+        self.for_puzzles = False
+
+    def apply_to_object(self, obj):
+        obj.canvas_component.painting_state = self._base_canvas_state
+
+
+class _CustomWeightedTexture:
+    def __init__(self, weight, texture):
+        self.weight = weight
+        self.texture = texture
+
+
+class _CustomPaintingStyle:
+    def __init__(self, base_style, weighted_textures):
+        self._base_style = base_style
+        self._display_name = getattr(base_style, '_display_name', None)
+        self._textures = tuple(weighted_textures)
+
+    @property
+    def display_name(self):
+        return self._display_name
+
+    def pick_texture(self, crafter, canvas_types=None, random=None):
+        if not self._textures:
+            return None
+        weights = []
+        for wt in self._textures:
+            tex = getattr(wt, 'texture', None)
+            if tex is None:
+                continue
+            tex_ct = getattr(tex, 'canvas_types', 0)
+            if not canvas_types or not tex_ct or (canvas_types & tex_ct):
+                weights.append((getattr(wt, 'weight', 1.0), tex))
+        if not weights:
+            weights = [
+                (getattr(wt, 'weight', 1.0), wt.texture)
+                for wt in self._textures
+                if getattr(wt, 'texture', None) is not None
+            ]
+        if not weights:
+            return None
+        rng = random if random is not None else _py_random
+        try:
+            picked = sims4.random.pop_weighted(list(weights), random=rng)
+            if picked is not None:
+                return picked
+        except Exception:
+            pass
+        return rng.choice(weights)[1]
+
+
+@functools.wraps(_original_load_data)
+def _easelease_load_data(self, *args, **kwargs):
+    result = _original_load_data(self, *args, **kwargs)
+    if self.TYPE in (Types.INTERACTION, Types.RECIPE, Types.OBJECT, getattr(Types, 'PIE_MENU_CATEGORY', None), getattr(Types, 'SNIPPET', None)):
+        try:
+            _populate_custom_painting_recipes()
+            _inject_easel_affordance()
+        except Exception as exc:
+            LOGGER.error('Failed to inject custom easel paintings: {}'.format(exc))
+    return result
+
+
+def _parse_custom_recipe_meta(recipe):
+    name = getattr(recipe, '__name__', '')
+    parts = name.split('_')
+    if len(parts) < 6 or not parts[3].isdigit():
+        return None, None, 'both'
+    base_id = int(parts[3])
+    base_id = LEGACY_BASE_RECIPE_MAP.get(base_id, base_id)
+    try:
+        image_id = int(parts[4], 16)
+    except Exception:
+        return None, None, 'both'
+    if image_id <= 0 or image_id > 0xFFFFFFFFFFFFFFFF:
+        return None, None, 'both'
+    if 'ONLYRANDOM' in parts:
+        mode = 'random'
+    elif 'ONLYCUSTOM' in parts:
+        mode = 'custom-menu'
+    else:
+        mode = 'both'
+    return base_id, image_id, mode
+
+
+def _resolve_canvas_types(base_id, base_recipe, base_list):
+    try:
+        fp = getattr(base_recipe, 'final_product', None)
+        defn = getattr(fp, 'definition', None)
+        cls = getattr(defn, 'cls', None) or getattr(base_recipe, 'final_product_type', None)
+        tuned_comp = getattr(cls, 'tuned_components', None)
+        canvas_comp = getattr(tuned_comp, 'canvas', None)
+        ct = getattr(canvas_comp, 'canvas_types', 0)
+        if ct:
+            return ct
+    except Exception:
+        pass
+
+    try:
+        from objects.components.canvas_component import CanvasType
+        if base_id in SMALL_RECIPE_IDS:
+            ct = getattr(CanvasType, 'Easel_Small', 0)
+        elif base_id in MEDIUM_RECIPE_IDS:
+            ct = getattr(CanvasType, 'Easel_Medium', 0)
+        elif base_id in LARGE_RECIPE_IDS:
+            ct = getattr(CanvasType, 'Easel_Large', 0)
+        else:
+            ct = 0
+        if ct:
+            return ct
+    except Exception:
+        pass
+
+    size_token = '_Sml_' if base_id in SMALL_RECIPE_IDS else ('_Med_' if base_id in MEDIUM_RECIPE_IDS else '_Lrg_')
+    for item in base_list:
+        tex = getattr(item, 'texture', None)
+        if tex is not None and size_token in getattr(tex, '__name__', ''):
+            ct = getattr(tex, 'canvas_types', 0)
+            if ct:
+                return ct
+
+    union_ct = 0
+    for item in base_list:
+        tex = getattr(item, 'texture', None)
+        ct = getattr(tex, 'canvas_types', 0)
+        if ct:
+            try:
+                union_ct |= ct
+            except Exception:
+                return ct
+    return union_ct
+
+
+def _build_custom_painting_style(base_id, base_recipe, image_ids):
+    from objects import PaintingState
+
+    base_style = getattr(base_recipe, 'painting_style', None)
+    if base_style is None or not image_ids:
+        return None
+
+    base_list = getattr(base_style, '_textures', None) or ()
+    canvas_types = _resolve_canvas_types(base_id, base_recipe, base_list)
+    always_tests = _AlwaysPassTests()
+
+    weighted_entries = []
+    for image_id in image_ids:
+        texture_key = sims4.resources.Key(IMAGE_TYPE, image_id, 0)
+        base_canvas_state = PaintingState.from_key(texture_key)
+        tex_obj = _CustomPaintingTexture(texture_key, base_canvas_state, canvas_types, always_tests)
+        weighted_entries.append(_CustomWeightedTexture(1.0, tex_obj))
+
+    if not weighted_entries:
+        return None
+
+    return _CustomPaintingStyle(base_style, weighted_entries)
+
+
+def _inject_into_ea_painting_style(base_id, base_recipe, image_ids):
+    from objects import PaintingState
+
+    if not image_ids:
+        return 0
+    base_style = getattr(base_recipe, 'painting_style', None)
+    if base_style is None:
+        return 0
+
+    base_list = list(getattr(base_style, '_textures', None) or ())
+    canvas_types = _resolve_canvas_types(base_id, base_recipe, base_list)
+    if not canvas_types:
+        return 0
+    always_tests = _AlwaysPassTests()
+
+    existing_by_id = {}
+    for item in base_list:
+        tex = getattr(item, 'texture', None)
+        tkey = getattr(tex, 'texture', None)
+        if tkey is not None:
+            inst = getattr(tkey, 'instance', tkey)
+            existing_by_id[inst] = tex
+
+    added = 0
+    for image_id in image_ids:
+        if image_id in existing_by_id:
+            existing_tex = existing_by_id[image_id]
+            if isinstance(existing_tex, _CustomPaintingTexture):
+                existing_tex.canvas_types = canvas_types
+            continue
+        texture_key = sims4.resources.Key(IMAGE_TYPE, image_id, 0)
+        base_canvas_state = PaintingState.from_key(texture_key)
+        tex_obj = _CustomPaintingTexture(texture_key, base_canvas_state, canvas_types, always_tests)
+        base_list.append(_CustomWeightedTexture(CLASSIC_POOL_WEIGHT, tex_obj))
+        existing_by_id[image_id] = tex_obj
+        added += 1
+
+    if added > 0:
+        base_style._textures = tuple(base_list)
+    return added
+
+
+def _get_tuned_dict(manager):
+    if manager is None:
+        return {}
+    tuned = getattr(manager, '_tuned_classes', None)
+    if tuned:
+        return tuned
+    try:
+        return getattr(manager, 'types', {}) or {}
+    except Exception:
+        return {}
+
+
+def _get_tuning(manager, tuning_id, res_type):
+    if manager is None:
+        return None
+    key = sims4.resources.get_resource_key(tuning_id, res_type)
+    tuned = getattr(manager, '_tuned_classes', None)
+    if tuned is not None:
+        val = tuned.get(key) or tuned.get(tuning_id)
+        if val is not None:
+            return val
+    try:
+        from objects.definition_manager import DefinitionManager
+        if isinstance(manager, DefinitionManager):
+            val = super(DefinitionManager, manager).get(tuning_id) or super(DefinitionManager, manager).get(key)
+            if val is not None:
+                return val
+    except Exception:
+        pass
+    try:
+        val = manager.get(key) or manager.get(tuning_id)
+        if val is not None and not hasattr(val, 'cls'):
+            return val
+        if hasattr(val, 'cls') and getattr(val, 'cls', None) is not None:
+            return val.cls
+    except Exception:
+        pass
+    try:
+        types_dict = getattr(manager, 'types', None)
+        if types_dict is not None:
+            return types_dict.get(key) or types_dict.get(tuning_id)
+    except Exception:
+        pass
+    return None
+
+
+def _get_ea_base_recipe(base_id, recipe_manager):
+    if base_id not in VALID_EA_BASE_RECIPE_IDS:
+        return None
+    base_recipe = _get_tuning(recipe_manager, base_id, Types.RECIPE)
+    if (
+        base_recipe is None
+        or getattr(base_recipe, 'final_product', None) is None
+        or getattr(base_recipe, 'painting_style', None) is None
+    ):
+        return None
+    return base_recipe
+
+
+def _hydrate_group_recipe(recipe, base_id, base_recipe, custom_style):
+    for attr in (
+        'name',
+        'phase_interaction_name',
+        'recipe_description',
+        'masterwork_name',
+        'crafted_by_text',
+        'icon_override',
+        'final_product',
+        '_first_phases',
+        '_phases',
+        '_first_phase_instances',
+        '_instanced_phases',
+        '_visible_phase_sequence',
+        'has_instanced_phases',
+        'crafting_cost',
+        'skill_loot_data',
+        'base_recipe',
+        'resume_affordance',
+        'autonomy_weight',
+        'additional_tests',
+        'buff_weight_multipliers',
+        'mood_list',
+        '_retail_price',
+        'resumable',
+        'craft_initial_state',
+        'use_ingredients',
+        'utility_info',
+        'simoleon_value_modifiers',
+        'simoleon_value_skill_curve',
+        'masterworks_data',
+        'quality_control_statistic',
+    ):
+        if hasattr(base_recipe, attr):
+            try:
+                value = getattr(base_recipe, attr)
+                if value is not None:
+                    setattr(recipe, attr, value)
+            except Exception:
+                pass
+
+    if getattr(recipe, 'skill_test', None) is None and getattr(base_recipe, 'skill_test', None) is not None:
+        recipe.skill_test = base_recipe.skill_test
+
+    if custom_style is None:
+        return False
+    recipe.painting_style = custom_style
+
+    cat_id = STYLE_CATEGORY_BY_RECIPE_ID.get(base_id, CUSTOM_ROOT_CATEGORY_ID)
+    cat_manager = services.get_instance_manager(Types.PIE_MENU_CATEGORY)
+    if cat_manager is not None:
+        custom_cat = _get_tuning(cat_manager, cat_id, Types.PIE_MENU_CATEGORY)
+        if custom_cat is not None:
+            recipe.base_recipe_category = custom_cat
+    return True
+
+
+def _ensure_valid_picker_dialog(custom_interaction, interaction_manager):
+    ea_easel = _get_tuning(interaction_manager, EA_EASEL_START_CRAFTING_ID, Types.INTERACTION)
+    if ea_easel is not None:
+        for attr in ('picker_dialog', 'pie_menu_option', 'display_name_text_tokens'):
+            val = getattr(ea_easel, attr, None)
+            if val is not None:
+                setattr(custom_interaction, attr, val)
+        return
+
+    for interaction in list(_get_tuned_dict(interaction_manager).values()):
+        if interaction is custom_interaction or not getattr(interaction, 'recipes', None):
+            continue
+        picker_dialog = getattr(interaction, 'picker_dialog', None)
+        if picker_dialog is None:
+            continue
+        columns = (
+            getattr(picker_dialog, 'picker_columns', None)
+            or getattr(picker_dialog, 'column_list', None)
+        )
+        if columns:
+            custom_interaction.picker_dialog = picker_dialog
+            return
+
+
+def _populate_custom_painting_recipes():
+    interaction_manager = services.get_instance_manager(Types.INTERACTION)
+    recipe_manager = services.get_instance_manager(Types.RECIPE)
+    if recipe_manager is None:
+        return
+
+    grouped = {}
+    all_recipes = sorted(
+        list(_get_tuned_dict(recipe_manager).values()),
+        key=lambda r: getattr(r, '__name__', ''),
+    )
+    for recipe in all_recipes:
+        name = getattr(recipe, '__name__', '')
+        if name.startswith(RECIPE_PREFIX):
+            base_id, image_id, mode = _parse_custom_recipe_meta(recipe)
+            if base_id is None or image_id is None:
+                continue
+            entry = grouped.setdefault(
+                base_id,
+                {'recipes': [], 'all_images': [], 'custom_images': [], 'random_images': []},
+            )
+            entry['recipes'].append(recipe)
+            if image_id not in entry['all_images']:
+                entry['all_images'].append(image_id)
+            if mode in ('both', 'custom-menu') and image_id not in entry['custom_images']:
+                entry['custom_images'].append(image_id)
+            if mode in ('both', 'random') and image_id not in entry['random_images']:
+                entry['random_images'].append(image_id)
+
+    representative_recipes = []
+    injected_classic_total = 0
+    for base_id in sorted(grouped):
+        entry = grouped[base_id]
+        base_recipe = _get_ea_base_recipe(base_id, recipe_manager)
+        if base_recipe is None:
+            continue
+
+        if entry['random_images']:
+            injected_classic_total += _inject_into_ea_painting_style(
+                base_id, base_recipe, entry['random_images']
+            )
+
+        style_images = entry['custom_images'] or entry['all_images']
+        custom_style = _build_custom_painting_style(base_id, base_recipe, style_images)
+        if custom_style is None:
+            continue
+
+        for recipe in entry['recipes']:
+            _hydrate_group_recipe(recipe, base_id, base_recipe, custom_style)
+
+        if entry['custom_images'] and entry['recipes']:
+            representative_recipes.append(entry['recipes'][0])
+
+    if interaction_manager is not None:
+        custom_interaction = _get_tuning(interaction_manager, CUSTOM_INTERACTION_ID, Types.INTERACTION)
+        if custom_interaction is not None:
+            _ensure_valid_picker_dialog(custom_interaction, interaction_manager)
+            custom_interaction.recipes = tuple(representative_recipes)
+            custom_interaction._cached_filtered_recipes_list = None
+            custom_interaction._cached_filtered_recipes_version = None
+
+    LOGGER.info(
+        'Loaded {} custom painting recipe groups ({} custom images, +{} added to classic EA styles)'.format(
+            len(representative_recipes),
+            sum(len(entry['all_images']) for entry in grouped.values()),
+            injected_classic_total,
+        )
+    )
+
+
+def _inject_easel_affordance():
+    object_manager = getattr(services, 'definition_manager', lambda: None)() or services.get_instance_manager(Types.OBJECT)
+    interaction_manager = services.get_instance_manager(Types.INTERACTION)
+    if object_manager is None or interaction_manager is None:
+        return
+
+    custom_interaction = _get_tuning(interaction_manager, CUSTOM_INTERACTION_ID, Types.INTERACTION)
+    if custom_interaction is None:
+        return
+
+    ea_start_crafting = _get_tuning(interaction_manager, EA_EASEL_START_CRAFTING_ID, Types.INTERACTION)
+
+    candidates = list(_get_tuned_dict(object_manager).values())
+    for obj_id in EA_EASEL_OBJECT_IDS:
+        explicit_obj = _get_tuning(object_manager, obj_id, Types.OBJECT)
+        if explicit_obj is not None and explicit_obj not in candidates:
+            candidates.append(explicit_obj)
+
+    for obj_tuning in candidates:
+        affordances = getattr(obj_tuning, '_super_affordances', None)
+        if not affordances:
+            continue
+        obj_guid = getattr(obj_tuning, 'guid64', 0)
+        obj_name = getattr(obj_tuning, '__name__', '').lower()
+        is_easel = (
+            obj_guid in EA_EASEL_OBJECT_IDS
+            or 'painteasel' in obj_name
+            or (ea_start_crafting is not None and ea_start_crafting in affordances)
+            or ('easel' in obj_name and any(
+                'craft' in getattr(a, '__name__', '').lower()
+                or 'paint' in getattr(a, '__name__', '').lower()
+                or 'startcrafting' in type(a).__name__.lower()
+                for a in affordances
+            ))
+            or any(
+                'easel' in getattr(a, '__name__', '').lower()
+                and ('craft' in getattr(a, '__name__', '').lower() or 'paint' in getattr(a, '__name__', '').lower())
+                for a in affordances
+            )
+        )
+        if is_easel and custom_interaction not in affordances:
+            obj_tuning._super_affordances = tuple(affordances) + (custom_interaction,)
+
+
+InstanceManager.load_data_into_class_instances = _easelease_load_data
+
+try:
+    import zone
+    _orig_on_loading_screen = zone.Zone.on_loading_screen_animation_finished
+
+    @functools.wraps(_orig_on_loading_screen)
+    def _easelease_on_loading_screen(self, *args, **kwargs):
+        result = _orig_on_loading_screen(self, *args, **kwargs)
+        try:
+            _populate_custom_painting_recipes()
+            _inject_easel_affordance()
+        except Exception as exc:
+            LOGGER.error('Failed on zone load custom easel injection: {}'.format(exc))
+        return result
+
+    zone.Zone.on_loading_screen_animation_finished = _easelease_on_loading_screen
+except Exception:
+    pass
+
+try:
+    from crafting.crafting_process import CraftingProcess
+    _orig_apply_simoleon_value = CraftingProcess.apply_simoleon_value
+
+    @functools.wraps(_orig_apply_simoleon_value)
+    def _safe_apply_simoleon_value(self, *args, **kwargs):
+        if getattr(self, 'recipe', None) is None:
+            return None
+        return _orig_apply_simoleon_value(self, *args, **kwargs)
+
+    CraftingProcess.apply_simoleon_value = _safe_apply_simoleon_value
+except Exception:
+    pass
+`}function _i(e){let t=atob(e),n=new Uint8Array(t.length);for(let e=0;e<t.length;e++)n[e]=t.charCodeAt(e);return n}function vi(){return ur({"easelease_custom_paintings.py":new TextEncoder().encode(gi())})}function yi(){let e=ur({"EaselEase_CustomPaintings_Core.package":hi(),"EaselEase_CustomPaintings.ts4script":vi(),"README_INSTALLATION.txt":new TextEncoder().encode(`EaselEase - Custom Paintings Pie Menu Mod
 =========================================
 
 Installation:
